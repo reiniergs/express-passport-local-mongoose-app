@@ -1,4 +1,4 @@
-Cuentas de Usuario!! {{user.id}}
+User list !  current user :{{user.id}}
 <table class="table table-condensed">
       <thead>
         <tr>
@@ -10,17 +10,19 @@ Cuentas de Usuario!! {{user.id}}
         </tr>
       </thead>
       <tbody>
-      {{#each userlist}}
+      {{#list userlist user}}
         <tr>
           <td>{{this.id}}</td>
           <td>{{this.username}} pinga</td>
           <td>{{this.password}}</td>
           <td>{{this.email}}</td>
-              <td class="text-center"><a><span class="glyphicon glyphicon-remove form-control-feedback"></span></a>
-              {{yell this.username}}
-           </td>
+          <td class="text-center">
+            {{#xif this.id "!=" this.user.id}}
+            <a><span class="glyphicon glyphicon-remove form-control-feedback"></pan></a>
+            {{/xif}}
+          </td>
         </tr>
-        {{/each}}
+        {{/list}}
       </tbody>
     </table>
-    {{user.id}}
+    current user : {{user.id}}
