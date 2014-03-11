@@ -1,0 +1,14 @@
+<nav class='navbar navbar-default' role='navigation'>
+  <div class='container-fluid'>
+    <a class='navbar-brand' href='/')> {{title}} </a>
+    <div class="navbar-right">
+    {{#if user }}
+      <p class="navbar-text ">Signed in as <b>{{user.username}}</b></p>
+      <a  class='btn btn-default navbar-btn navbar-right' href="/logout" role="button">Log Out</a>
+    {{else}}
+      <a  class='btn btn-default navbar-btn' href="/register" role="button">Sign Up</a> 
+      <a  class='btn btn-default navbar-btn' href="/login" role="button">Log In</a> 
+     {{/if}} 
+    </div>
+  </div>  
+</nav>

@@ -1,0 +1,26 @@
+Cuentas de Usuario!! {{user.id}}
+<table class="table table-condensed">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Email</th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#each userlist}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td>{{this.username}} pinga</td>
+          <td>{{this.password}}</td>
+          <td>{{this.email}}</td>
+              <td class="text-center"><a><span class="glyphicon glyphicon-remove form-control-feedback"></span></a>
+              {{yell this.username}}
+           </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{user.id}}
